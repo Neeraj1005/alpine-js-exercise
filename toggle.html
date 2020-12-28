@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <title>Alpine Js</title>
+</head>
+
+<body>
+    <div x-data="{ isOpen: false }">
+        <button @click="isOpen = !isOpen"
+            class="w-full flex items-center justify-center px-8 py-3 border border-transparent 
+            text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">Click Me!</button>
+        <h5 x-show="isOpen">Hello World! 👋</h5>
+    </div>
+</body>
+
+</html>
