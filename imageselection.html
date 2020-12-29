@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <title>Image Selection</title>
+</head>
+<body class="bg-gray-400">
+    <div class="container mx-auto px-4 mt-4" x-data="{ image: 'image1'}">
+        <div>
+            <img src="slider2.jpg" alt="mac pro" style="height: 50%; width: 50%;" x-show="image === 'image1'">
+            <img src="slider2.png" alt="mac pro" style="height: 50%; width: 50%;" x-show="image === 'image2'">
+            <img src="slider3.png" alt="mac pro" style="height: 50%; width: 50%;" x-show="image === 'image3'">
+        </div>
+        <div class="flex items-center mt-4">
+            <a href="#" class="border border-transparent hover:border-blue-500"><img src="slider2.jpg" alt="mac pro" class="w-12" @click.prevent="image = 'image1'"></a>
+            <a href="#" class="border border-transparent hover:border-blue-500 ml-2"><img src="slider2.png" alt="mac pro" class="w-12" @click.prevent="image = 'image2'"></a>
+            <a href="#" class="border border-transparent hover:border-blue-500 ml-2"><img src="slider3.png" alt="mac pro" class="w-12" @click.prevent="image = 'image3'"></a>
+        </div>
+    </div>
+</body>
+
+</html>
